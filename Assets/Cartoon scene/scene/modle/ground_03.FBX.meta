@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: c4857fe0334b58842bb0426a9a988304
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: wooden
+    100002: chair
+    100004: trash
+    100006: table
+    100008: parterre
+    100010: umbrella
+    100012: cityhouse_02
+    100014: cityhouse_01
+    100016: track
+    100018: cityhouse_02light
+    100020: pillar
+    100022: street_02
+    100024: street_03
+    100026: //RootNode
+    100028: elevator
+    100030: glass
+    100032: below
+    100034: ground_03
+    100036: cityhouse_03
+    400000: wooden
+    400002: chair
+    400004: trash
+    400006: table
+    400008: parterre
+    400010: umbrella
+    400012: cityhouse_02
+    400014: cityhouse_01
+    400016: track
+    400018: cityhouse_02light
+    400020: pillar
+    400022: street_02
+    400024: street_03
+    400026: //RootNode
+    400028: elevator
+    400030: glass
+    400032: below
+    400034: ground_03
+    400036: cityhouse_03
+    2300000: wooden
+    2300002: chair
+    2300004: trash
+    2300006: table
+    2300008: parterre
+    2300010: umbrella
+    2300012: cityhouse_02
+    2300014: cityhouse_01
+    2300016: track
+    2300018: cityhouse_02light
+    2300020: pillar
+    2300022: street_02
+    2300024: street_03
+    2300026: elevator
+    2300028: glass
+    2300030: below
+    2300032: ground_03
+    2300034: cityhouse_03
+    3300000: wooden
+    3300002: chair
+    3300004: trash
+    3300006: table
+    3300008: parterre
+    3300010: umbrella
+    3300012: cityhouse_02
+    3300014: cityhouse_01
+    3300016: track
+    3300018: cityhouse_02light
+    3300020: pillar
+    3300022: street_02
+    3300024: street_03
+    3300026: elevator
+    3300028: glass
+    3300030: below
+    3300032: ground_03
+    3300034: cityhouse_03
+    4300000: play_Hair_01
+    4300002: cityhouse_02light
+    4300004: cityhouse_03
+    4300006: ground_03
+    4300008: below
+    4300010: Object006
+    4300012: elevator
+    4300014: track
+    4300016: cityhouse_01
+    4300018: cityhouse_02
+    4300020: umbrella
+    4300022: parterre
+    4300024: table
+    4300026: trash
+    4300028: chair
+    4300030: wooden
+    4300032: street_03
+    4300034: street_02
+    4300036: pillar
+    4300038: glass
+    11100000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

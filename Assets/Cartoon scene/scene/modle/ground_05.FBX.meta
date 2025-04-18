@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: e007d06f29ec12e47bdcb9ef4d1ccd0a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: border_01
+    100004: border_02
+    100006: border_04
+    100008: border_03
+    100010: base_01
+    100012: border_05
+    100014: baidunzi_02
+    100016: baidunzi_01
+    100018: wall_01
+    100020: street_02
+    100022: wall_03
+    100024: wall_02
+    100026: ground_05
+    100028: railing_01
+    100030: pipeline_04
+    100032: pipeline_05
+    100034: pipeline_06
+    100036: pipeline_01
+    100038: pipeline_03
+    100040: pipeline_02
+    100042: computer_02
+    100044: Petridish_01
+    100046: computer_01
+    100048: computer_03
+    100050: street_03
+    400000: //RootNode
+    400002: border_01
+    400004: border_02
+    400006: border_04
+    400008: border_03
+    400010: base_01
+    400012: border_05
+    400014: baidunzi_02
+    400016: baidunzi_01
+    400018: wall_01
+    400020: street_02
+    400022: wall_03
+    400024: wall_02
+    400026: ground_05
+    400028: railing_01
+    400030: pipeline_04
+    400032: pipeline_05
+    400034: pipeline_06
+    400036: pipeline_01
+    400038: pipeline_03
+    400040: pipeline_02
+    400042: computer_02
+    400044: Petridish_01
+    400046: computer_01
+    400048: computer_03
+    400050: street_03
+    2300000: border_01
+    2300002: border_02
+    2300004: border_04
+    2300006: border_03
+    2300008: base_01
+    2300010: border_05
+    2300012: baidunzi_02
+    2300014: baidunzi_01
+    2300016: wall_01
+    2300018: street_02
+    2300020: wall_03
+    2300022: wall_02
+    2300024: ground_05
+    2300026: railing_01
+    2300028: pipeline_04
+    2300030: pipeline_05
+    2300032: pipeline_06
+    2300034: pipeline_01
+    2300036: pipeline_03
+    2300038: pipeline_02
+    2300040: computer_02
+    2300042: Petridish_01
+    2300044: computer_01
+    2300046: computer_03
+    2300048: street_03
+    3300000: border_01
+    3300002: border_02
+    3300004: border_04
+    3300006: border_03
+    3300008: base_01
+    3300010: border_05
+    3300012: baidunzi_02
+    3300014: baidunzi_01
+    3300016: wall_01
+    3300018: street_02
+    3300020: wall_03
+    3300022: wall_02
+    3300024: ground_05
+    3300026: railing_01
+    3300028: pipeline_04
+    3300030: pipeline_05
+    3300032: pipeline_06
+    3300034: pipeline_01
+    3300036: pipeline_03
+    3300038: pipeline_02
+    3300040: computer_02
+    3300042: Petridish_01
+    3300044: computer_01
+    3300046: computer_03
+    3300048: street_03
+    4300000: computer_01
+    4300002: Petridish_01
+    4300004: computer_02
+    4300006: pipeline_02
+    4300008: pipeline_03
+    4300010: pipeline_01
+    4300012: pipeline_06
+    4300014: pipeline_05
+    4300016: pipeline_04
+    4300018: railing_01
+    4300020: ground_05
+    4300022: wall_02
+    4300024: wall_03
+    4300026: street_02
+    4300028: wall_01
+    4300030: baidunzi_01
+    4300032: baidunzi_02
+    4300034: border_05
+    4300036: base_01
+    4300038: border_03
+    4300040: border_04
+    4300042: border_02
+    4300044: border_01
+    4300046: street_03
+    4300048: computer_03
+    11100000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

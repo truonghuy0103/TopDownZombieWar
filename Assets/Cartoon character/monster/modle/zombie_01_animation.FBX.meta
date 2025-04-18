@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: 4baa6e7aab3f06645a47302d5205fd00
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bip01 R Finger0Nub
+    100002: Bip01 R Finger1Nub
+    100004: Bip01 R Finger1
+    100006: //RootNode
+    100008: Bip01 Neck
+    100010: Bip01 Spine1
+    100012: Bip01 L Finger1Nub
+    100014: zombie_body_04
+    100016: Bip01 Head
+    100018: Bip01 L Hand
+    100020: Bip01 L Forearm
+    100022: Bip01 R Toe0Nub
+    100024: Bip01 R Calf
+    100026: Bip01 R UpperArm
+    100028: Bip01 L Foot
+    100030: Bip01 L Calf
+    100032: Bip01 R Finger0
+    100034: Bip01 R Foot
+    100036: Bip01 L Finger0
+    100038: Bip01 L Finger0Nub
+    100040: Bip01 R Clavicle
+    100042: Bip01 L Clavicle
+    100044: Bip01 R Hand
+    100046: Bip01 R Forearm
+    100048: Bip01 Spine
+    100050: Bip01 Pelvis
+    100052: zombie_body_01
+    100054: zombie_head_01
+    100056: zombie_leg_01
+    100058: Bip01 HeadNub
+    100060: Bip01 Null
+    100062: Bip01 R Toe0
+    100064: Bip01 L UpperArm
+    100066: Bip01 R Thigh
+    100068: Bip01 L Toe0Nub
+    100070: Bip01 Footsteps
+    100072: Bip01
+    100074: Bip01 L Thigh
+    100076: Bip01 L Toe0
+    100078: Bip01 L Finger1
+    100080: zombie_leg_04
+    100082: zombie_flower
+    100084: zombie_hair_04
+    100086: zombie_hat
+    100088: zombie_hair_06
+    100090: zombie_head_04
+    400000: Bip01 R Finger0Nub
+    400002: Bip01 R Finger1Nub
+    400004: Bip01 R Finger1
+    400006: //RootNode
+    400008: Bip01 Neck
+    400010: Bip01 Spine1
+    400012: Bip01 L Finger1Nub
+    400014: zombie_body_04
+    400016: Bip01 Head
+    400018: Bip01 L Hand
+    400020: Bip01 L Forearm
+    400022: Bip01 R Toe0Nub
+    400024: Bip01 R Calf
+    400026: Bip01 R UpperArm
+    400028: Bip01 L Foot
+    400030: Bip01 L Calf
+    400032: Bip01 R Finger0
+    400034: Bip01 R Foot
+    400036: Bip01 L Finger0
+    400038: Bip01 L Finger0Nub
+    400040: Bip01 R Clavicle
+    400042: Bip01 L Clavicle
+    400044: Bip01 R Hand
+    400046: Bip01 R Forearm
+    400048: Bip01 Spine
+    400050: Bip01 Pelvis
+    400052: zombie_body_01
+    400054: zombie_head_01
+    400056: zombie_leg_01
+    400058: Bip01 HeadNub
+    400060: Bip01 Null
+    400062: Bip01 R Toe0
+    400064: Bip01 L UpperArm
+    400066: Bip01 R Thigh
+    400068: Bip01 L Toe0Nub
+    400070: Bip01 Footsteps
+    400072: Bip01
+    400074: Bip01 L Thigh
+    400076: Bip01 L Toe0
+    400078: Bip01 L Finger1
+    400080: zombie_leg_04
+    400082: zombie_flower
+    400084: zombie_hair_04
+    400086: zombie_hat
+    400088: zombie_hair_06
+    400090: zombie_head_04
+    2300000: zombie_flower
+    2300002: zombie_hair_04
+    2300004: zombie_head_01
+    2300006: zombie_hat
+    2300008: zombie_hair_06
+    2300010: zombie_head_04
+    3300000: zombie_flower
+    3300002: zombie_hair_04
+    3300004: zombie_head_01
+    3300006: zombie_hat
+    3300008: zombie_hair_06
+    3300010: zombie_head_04
+    4300000: zombie_body_01
+    4300002: zombie_leg_01
+    4300004: zombie_head_01
+    4300006: player_hair_03
+    4300008: player_head_03
+    4300010: player_body_03
+    4300012: player_leg_03
+    4300014: player_hair_04
+    4300016: player_head_04
+    4300018: player_body_04
+    4300020: player_leg_04
+    4300022: zombie_hair_04
+    4300024: zombie_head_04
+    4300026: zombie_body_04
+    4300028: zombie_leg_04
+    4300030: zombie_hair_06
+    4300032: zombie_flower
+    4300034: zombie_hat
+    7400000: Take 001
+    7400002: idle
+    7400004: zombie_run
+    7400006: zombie_stand
+    7400008: zombie_attack01
+    7400010: zombie_attack02
+    7400012: zombie_acombat
+    7400014: zombie_combat
+    7400016: zombie_01
+    7400018: zombie_02
+    7400020: zombie_death01
+    7400022: zombie_death02
+    7400024: zombie_01_stand
+    7400026: zombie_01_run
+    7400028: zombie_01_attack01
+    7400030: zombie_01_attack02
+    7400032: zombie_01_combat
+    7400034: zombie_01_death01
+    7400036: zombie_01_death02
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: zombie_body_01
+    13700004: zombie_leg_01
+    13700006: zombie_body_04
+    13700008: zombie_leg_04
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: player_body_04
+    second: {fileID: 2100000, guid: c053e5deb7fd43e45b4251ac269cca37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: player_head_04
+    second: {fileID: 2100000, guid: 7381d4ff4f1e8844e855eb8b7cf82fc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: player_leg_04
+    second: {fileID: 2100000, guid: fecc2a700ad3a3e4e853e804658bc210, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: zombie_body_01
+    second: {fileID: 2100000, guid: ec9b00185e841284e9bf2d7834729f47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: zombie_hair_04
+    second: {fileID: 2100000, guid: c718f069fccd2634697bdb913a0a90ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: zombie_hair_06
+    second: {fileID: 2100000, guid: ac9c6070a69fd5b4d95e499288bacdf9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: zombie_head_01
+    second: {fileID: 2100000, guid: ee6a2ef487bf8fb469ac8ac6c3a136d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: zombie_leg_01
+    second: {fileID: 2100000, guid: 74c204bda6007014d995a756301cb1e2, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: zombie_01_stand
+      takeName: 
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: zombie_01_run
+      takeName: 
+      firstFrame: 45
+      lastFrame: 85
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: zombie_01_attack01
+      takeName: 
+      firstFrame: 90
+      lastFrame: 130
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: zombie_01_attack02
+      takeName: 
+      firstFrame: 135
+      lastFrame: 170
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: zombie_01_combat
+      takeName: 
+      firstFrame: 175
+      lastFrame: 190
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: zombie_01_death01
+      takeName: 
+      firstFrame: 195
+      lastFrame: 235
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: zombie_01_death02
+      takeName: 
+      firstFrame: 240
+      lastFrame: 300
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

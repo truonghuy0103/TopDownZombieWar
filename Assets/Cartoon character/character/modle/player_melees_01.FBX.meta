@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: 8f6d6e52913aff041b8355a26306d9da
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bip01 L Clavicle
+    100002: Bip01 R UpperArm
+    100004: Bip01 L Finger0Nub
+    100006: //RootNode
+    100008: Bip01 R Finger1Nub
+    100010: Bip01 Ponytail1Nub
+    100012: Bip01 R Clavicle
+    100014: Bip01 Ponytail11
+    100016: Bip01 L Finger1Nub
+    100018: Bip01 Ponytail2Nub
+    100020: Bip01 Ponytail12
+    100022: Bip01 L UpperArm
+    100024: player_melees_head
+    100026: Bip01 Ponytail21
+    100028: Bip01 Ponytail22
+    100030: Bip01 R Calf
+    100032: Bip01 R Thigh
+    100034: Bip01 R Finger0Nub
+    100036: Bip01 Ponytail1
+    100038: Bip01 HeadNub
+    100040: Bip01 Head
+    100042: Bip01 R Finger0
+    100044: Bip01 Footsteps
+    100046: Bip01
+    100048: player_melees_body01
+    100050: Bip01 Shadow
+    100052: Bip01 L Foot
+    100054: Bip01 L Calf
+    100056: Bip01 R Toe0Nub
+    100058: Bip01 Ponytail2
+    100060: Bip01 L Finger1
+    100062: Bip01 L Thigh
+    100064: Bip01 Weapon
+    100066: Bip01 Spine
+    100068: Bip01 Pelvis
+    100070: Bip01 L Toe0Nub
+    100072: Bip01 L Toe0
+    100074: Bip01 R Finger1
+    100076: Bip01 R Toe0
+    100078: Bip01 R Foot
+    100080: Bip01 R Hand
+    100082: Bip01 R Forearm
+    100084: Bip01 L Finger0
+    100086: Bip01 Neck
+    100088: Bip01 Spine1
+    100090: Bip01 L Hand
+    100092: Bip01 L Forearm
+    400000: Bip01 L Clavicle
+    400002: Bip01 R UpperArm
+    400004: Bip01 L Finger0Nub
+    400006: //RootNode
+    400008: Bip01 R Finger1Nub
+    400010: Bip01 Ponytail1Nub
+    400012: Bip01 R Clavicle
+    400014: Bip01 Ponytail11
+    400016: Bip01 L Finger1Nub
+    400018: Bip01 Ponytail2Nub
+    400020: Bip01 Ponytail12
+    400022: Bip01 L UpperArm
+    400024: player_melees_head
+    400026: Bip01 Ponytail21
+    400028: Bip01 Ponytail22
+    400030: Bip01 R Calf
+    400032: Bip01 R Thigh
+    400034: Bip01 R Finger0Nub
+    400036: Bip01 Ponytail1
+    400038: Bip01 HeadNub
+    400040: Bip01 Head
+    400042: Bip01 R Finger0
+    400044: Bip01 Footsteps
+    400046: Bip01
+    400048: player_melees_body01
+    400050: Bip01 Shadow
+    400052: Bip01 L Foot
+    400054: Bip01 L Calf
+    400056: Bip01 R Toe0Nub
+    400058: Bip01 Ponytail2
+    400060: Bip01 L Finger1
+    400062: Bip01 L Thigh
+    400064: Bip01 Weapon
+    400066: Bip01 Spine
+    400068: Bip01 Pelvis
+    400070: Bip01 L Toe0Nub
+    400072: Bip01 L Toe0
+    400074: Bip01 R Finger1
+    400076: Bip01 R Toe0
+    400078: Bip01 R Foot
+    400080: Bip01 R Hand
+    400082: Bip01 R Forearm
+    400084: Bip01 L Finger0
+    400086: Bip01 Neck
+    400088: Bip01 Spine1
+    400090: Bip01 L Hand
+    400092: Bip01 L Forearm
+    4300000: player_melees_body01
+    4300002: player_melees_head
+    7400000: Take 001
+    7400002: idle
+    7400004: player_auto_run
+    7400006: player_rocket_stand01
+    7400008: idle0
+    7400010: idle1
+    7400012: idle2
+    7400014: player_rocket_attack
+    7400016: player_rocket_combat
+    7400018: player_melees_run
+    7400020: player_melees_stand
+    7400022: player_melees_attack
+    7400024: player_melees_combat
+    7400026: player_melees_death
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: player_melees_head
+    13700002: player_melees_body01
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: player_melees_body01
+    second: {fileID: 2100000, guid: f7d22f37fd9b9a1499180f7959c2370f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: player_melees_head
+    second: {fileID: 2100000, guid: bdd0e03f05baabf49a470e3048e6ed9a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: player_melees_run
+      takeName: 
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_melees_stand
+      takeName: 
+      firstFrame: 25
+      lastFrame: 65
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_melees_attack
+      takeName: 
+      firstFrame: 70
+      lastFrame: 125
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_melees_combat
+      takeName: 
+      firstFrame: 130
+      lastFrame: 150
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: player_melees_death
+      takeName: 
+      firstFrame: 155
+      lastFrame: 195
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
