@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c420f1bd8e24488b3478e26679ab87, type: 3}
+  m_Name: ConfigEnemy
+  m_EditorClassIdentifier: 
+  Enemies:
+  - id: zombie1
+    name: ZombieMan
+    hp: 10
+    damage: 1
+    rangeOfAttack: 1.5
+    namePrefab: ZombieMan
+  - id: zombie2
+    name: ZombieWoman
+    hp: 5
+    damage: 2
+    rangeOfAttack: 1
+    namePrefab: ZombieWoman
+  - id: zombie3
+    name: ZombieBoss
+    hp: 20
+    damage: 5
+    rangeOfAttack: 2
+    namePrefab: ZombieBoss

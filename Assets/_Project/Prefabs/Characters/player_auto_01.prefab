@@ -1027,6 +1027,9 @@ GameObject:
   - component: {fileID: 1355514416674887287}
   - component: {fileID: 2813900365961985452}
   - component: {fileID: 8730216825487682526}
+  - component: {fileID: 2363436393578864859}
+  - component: {fileID: 1320004067938330300}
+  - component: {fileID: 533476106400123134}
   m_Layer: 0
   m_Name: player_auto_01
   m_TagString: Untagged
@@ -1101,6 +1104,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerDataBinding: {fileID: 2813900365961985452}
+  dir: {x: 0, y: 0}
+--- !u!114 &2363436393578864859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7268955385462208006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d8085247cfd415bbf0044945f4cc35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1320004067938330300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7268955385462208006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0bad42ef83f4c2599d57c9da9652aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterController: {fileID: 533476106400123134}
+  _playerDataBinding: {fileID: 2813900365961985452}
+  _playerInput: {fileID: 8730216825487682526}
+  _speedMove: 2
+  _transModel: {fileID: 6815788160625983686}
+--- !u!143 &533476106400123134
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7268955385462208006}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &7295659543970480559
 GameObject:
   m_ObjectHideFlags: 0
