@@ -7,7 +7,14 @@ public class AutoAction : IWeapon
     {
        _autoWeapon = data as AutoWeapon;
        //Create bullet
+       Transform transBullet = PoolManager.Instance.dictPools[NamePool.PoolBulletAuto.ToString()].GetObjectInstance();
+       transBullet.position = _autoWeapon.posShoot.position;
 
+       Vector3 dir = _autoWeapon.aimPosShoot.position - _autoWeapon.posShoot.position;
+       dir.Normalize();
+       transBullet.up = dir;
+       transBullet.GetComponent<AutoBullet>().OnShoot(10, dir, _autoWeapon.damage);
+       
        _autoWeapon.currentBullet--;
     }
 

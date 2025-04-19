@@ -42,11 +42,15 @@ public class WeaponBehaviour : MonoBehaviour
     private void Update()
     {
         _timer += Time.deltaTime;
-        if (_weaponControl.IsFire && _timer >= rateOfFire)
+        if (_weaponControl != null)
         {
-            //Play anim attack
-            OnAttack();
-            _timer = 0;
+            if (_weaponControl.IsFire && _timer >= rateOfFire)
+            {
+                //Play anim attack
+                _weaponControl.PlayAttackAnimation();
+                OnAttack();
+                _timer = 0;
+            }
         }
     }
 
@@ -75,9 +79,9 @@ public class WeaponBehaviour : MonoBehaviour
 
     IEnumerator RunMuzzle()
     {
-        _goMuzzle.SetActive(false);
+        _goMuzzle.SetActive(true);
         _goMuzzle.transform.localRotation = Quaternion.Euler(0, 90, Random.Range(0, 180));
         yield return new WaitForSeconds(0.1f);
-        _goMuzzle.SetActive(true);
+        _goMuzzle.SetActive(false);
     }
 }

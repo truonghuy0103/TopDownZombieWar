@@ -19,7 +19,8 @@ public class WeaponControl : MonoBehaviour
     [SerializeField] private List<WeaponBehaviour> _listWeapons = new List<WeaponBehaviour>();
     [SerializeField] private PlayerDataBinding _playerDataBinding;
     [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private WeaponBehaviour _currentWeapon;
+    
+    private WeaponBehaviour _currentWeapon;
 
     private bool _isFire;
 
@@ -37,7 +38,6 @@ public class WeaponControl : MonoBehaviour
         _playerInput.OnFire += OnCheckFire;
 
         _indexWeapon = -1;
-        SwitchWeapon();
     }
 
     public void PlayAttackAnimation()
@@ -97,14 +97,20 @@ public class WeaponControl : MonoBehaviour
         
         _listWeapons[_indexWeapon].gameObject.SetActive(true);
         _currentWeapon = _listWeapons[_indexWeapon];
-
-        int indexGun = _indexWeapon + 1;
-        ConfigGunData configGunData = ConfigManager.Instance.configGun.GetGunById(indexGun.ToString());
-        _currentWeapon.OnSetupBehaviour(configGunData,this);
-
+        
         if (OnChangeGunHandle != null)
         {
             OnChangeGunHandle.Invoke(_currentWeapon);
+        }
+    }
+
+    public void SetupWeaponBehaviour()
+    {
+        for (int i = 0; i < _listWeapons.Count; i++)
+        {
+            int indexGun = i + 1;
+            ConfigGunData configGunData = ConfigManager.Instance.configGun.GetGunById(indexGun.ToString());
+            _listWeapons[i].OnSetupBehaviour(configGunData,this);
         }
     }
 }

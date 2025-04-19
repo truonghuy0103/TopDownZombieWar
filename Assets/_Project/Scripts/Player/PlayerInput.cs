@@ -31,5 +31,10 @@ public class PlayerInput : MonoBehaviour
         {
             IsFire = true;
         }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            IsFire = false;
+        }
     }
 }

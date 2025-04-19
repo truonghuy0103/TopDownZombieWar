@@ -5,10 +5,10 @@ public class PoolDefine : SingletonMono<PoolDefine>
 {
    public void InitPool(Action callback = null)
    {
-      Transform transBulletAuto = Resources.Load<Transform>("BulletAuto") as Transform;
+      Transform transBulletAuto = Resources.Load<Transform>("Pools/BulletAuto") as Transform;
       CreatePool(NamePool.PoolBulletAuto,20,transBulletAuto);
       
-      Transform transImpactEnemy = Resources.Load<Transform>("ImpactEnemy") as Transform;
+      Transform transImpactEnemy = Resources.Load<Transform>("Pools/ImpactEnemy") as Transform;
       CreatePool(NamePool.PoolImpactEnemy,20,transImpactEnemy);
 
       if (callback != null)

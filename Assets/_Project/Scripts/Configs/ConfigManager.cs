@@ -7,15 +7,6 @@ public class ConfigManager : SingletonMono<ConfigManager>
     public ConfigGun configGun;
     public ConfigEnemy configEnemy;
     public ConfigCharacter configCharacter;
-
-    public void Awake()
-    {
-        InitConfig(() =>
-        {
-            Debug.Log("Load config done");
-        });
-    }
-
     public void InitConfig(Action callback)
     {
         StartCoroutine(LoadConfig(callback));
