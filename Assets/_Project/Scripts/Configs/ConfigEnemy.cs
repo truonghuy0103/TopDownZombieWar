@@ -1,25 +1,26 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "ConfigEnemy", menuName = "Config/Config Enemy")]
 public class ConfigEnemy : ScriptableObject
 {
-    public List<EnemyData> Enemies = new List<EnemyData>();
+    public List<ConfigEnemyData> Enemies = new List<ConfigEnemyData>();
 
-    public EnemyData GetEnemyDataById(string id)
+    public ConfigEnemyData GetEnemyDataById(string id)
     {
         return Enemies.Find(e => e.id == id);
     }
 }
 
 [Serializable]
-public class EnemyData
+public class ConfigEnemyData
 {
     public string id;
     public string name;
     public int hp;
     public int damage;
-    public float rangeOfAttack;
+    public float rateOfAttack;
     public string namePrefab;
 }

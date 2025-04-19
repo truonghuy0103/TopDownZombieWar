@@ -1,24 +1,25 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "ConfigGun", menuName = "Config/Config Gun")]
 public class ConfigGun : ScriptableObject
 {
-    public List<GunData> Guns = new List<GunData>();
+    public List<ConfigGunData> Guns = new List<ConfigGunData>();
 
-    public GunData GetGunById(string id)
+    public ConfigGunData GetGunById(string id)
     {
         return Guns.Find(g => g.id == id);
     }
 }
 
 [Serializable]
-public class GunData
+public class ConfigGunData
 {
     public string id;
     public string name;
-    public float rangeOfFire;
+    public float rateOfFire;
     public int damage;
     public int clipSize;
     public int amountAmo;

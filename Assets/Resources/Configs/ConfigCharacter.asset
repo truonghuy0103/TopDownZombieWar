@@ -17,5 +17,5 @@ MonoBehaviour:
     name: AutoCharacter
     hp: 15
     skinId: 
-    weaponId: gun1
+    weaponId: 1
     namePrefab: AutoCharacter

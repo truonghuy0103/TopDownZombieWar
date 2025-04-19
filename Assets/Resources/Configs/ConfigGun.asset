@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: ConfigGun
   m_EditorClassIdentifier: 
   Guns:
-  - id: gun1
-    name: auto
-    rangeOfFire: 0.1
+  - id: 1
+    name: Gun1
+    rateOfFire: 0.2
     damage: 2
     clipSize: 30
     amountAmo: 90
+    timeReload: 2
+  - id: 2
+    name: Gun2
+    rateOfFire: 1
+    damage: 5
+    clipSize: 10
+    amountAmo: 30
     timeReload: 2

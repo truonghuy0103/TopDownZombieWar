@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: ConfigEnemy
   m_EditorClassIdentifier: 
   Enemies:
-  - id: zombie1
+  - id: 1
     name: ZombieMan
     hp: 10
     damage: 1
-    rangeOfAttack: 1.5
+    rateOfAttack: 1.5
     namePrefab: ZombieMan
-  - id: zombie2
+  - id: 2
     name: ZombieWoman
     hp: 5
     damage: 2
-    rangeOfAttack: 1
+    rateOfAttack: 1
     namePrefab: ZombieWoman
-  - id: zombie3
+  - id: 3
     name: ZombieBoss
     hp: 20
     damage: 5
-    rangeOfAttack: 2
+    rateOfAttack: 2
     namePrefab: ZombieBoss
