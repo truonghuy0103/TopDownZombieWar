@@ -1,0 +1,34 @@
+using UnityEngine;
+using System;
+
+public class PoolDefine : SingletonMono<PoolDefine>
+{
+   public void InitPool(Action callback = null)
+   {
+      Transform transBulletAuto = Resources.Load<Transform>("BulletAuto") as Transform;
+      CreatePool(NamePool.PoolBulletAuto,20,transBulletAuto);
+      
+      Transform transImpactEnemy = Resources.Load<Transform>("ImpactEnemy") as Transform;
+      CreatePool(NamePool.PoolImpactEnemy,20,transImpactEnemy);
+
+      if (callback != null)
+      {
+         callback.Invoke();
+      }
+   }
+
+   private void CreatePool(NamePool namePool, int maxObject, Transform prefabObjects)
+   {
+      PoolItem poolItem = new PoolItem();
+      poolItem.namePool = namePool.ToString();
+      poolItem.maxObject = maxObject;
+      poolItem.prefab = prefabObjects;
+      PoolManager.Instance.AddNewPool(poolItem);
+   }
+}
+
+public enum NamePool
+{
+   PoolBulletAuto = 0,
+   PoolImpactEnemy = 1
+}
