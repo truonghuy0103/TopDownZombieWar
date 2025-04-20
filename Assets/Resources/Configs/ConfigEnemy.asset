@@ -17,11 +17,13 @@ MonoBehaviour:
     name: ZombieNormal
     hp: 10
     damage: 1
+    speed: 3
     rateOfAttack: 1.5
     namePrefab: ZombieNormal
   - id: 2
     name: ZombieBoss
     hp: 20
     damage: 5
+    speed: 2
     rateOfAttack: 2
     namePrefab: ZombieBoss

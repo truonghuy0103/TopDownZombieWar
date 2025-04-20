@@ -21,6 +21,7 @@ public class ConfigEnemyData
     public string name;
     public int hp;
     public int damage;
+    public float speed;
     public float rateOfAttack;
     public string namePrefab;
 }

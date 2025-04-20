@@ -1,0 +1,38 @@
+using UnityEngine;
+using System;
+using Random = UnityEngine.Random;
+
+[Serializable]
+public class ZombieNormal_IdleState : FSMState
+{
+    [NonSerialized] public ZombieNormalSystem parent;
+
+    private float _timeWait = 0;
+    private float _randomTime = 2;
+
+    public override void OnEnter()
+    {
+        base.OnEnter();
+        _randomTime = Random.Range(2f, 4f);
+        _timeWait = 0;
+        //Set anim idle
+        parent.zombieNormalDataBinding.Speed = 0;
+        parent.navMeshAgent.speed = 0;
+    }
+
+    public override void OnUpdate()
+    {
+        base.OnUpdate();
+        _timeWait += Time.deltaTime;
+        if (_timeWait >= _randomTime)
+        {
+            parent.GotoState(parent.runState,parent.target);
+        }
+    }
+
+    public override void OnExit()
+    {
+        base.OnExit();
+        _timeWait = 0;
+    }
+}
