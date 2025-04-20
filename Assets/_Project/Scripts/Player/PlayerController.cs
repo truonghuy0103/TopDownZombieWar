@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
         ConfigManager.Instance.InitConfig(() =>
         {
             PoolDefine.Instance.InitPool(OnSetupWeapon);
+            MissionControl.Instance.OnSetupMission();
         });
     }
 

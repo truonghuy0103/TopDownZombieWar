@@ -26,7 +26,7 @@ public class ZombieNormal_IdleState : FSMState
         _timeWait += Time.deltaTime;
         if (_timeWait >= _randomTime)
         {
-            parent.GotoState(parent.runState,parent.target);
+            parent.GotoState(parent.runState);
         }
     }
 

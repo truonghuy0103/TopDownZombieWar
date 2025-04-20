@@ -9,13 +9,10 @@ public class ZombieNormal_AttackState : FSMState
     private float _timer = 0;
     private float _timeLimit = 1;
     
-    private Transform _target;
-
     public override void OnEnter()
     {
         base.OnEnter();
         
-        _target = parent.target;
         //Anim attack
         parent.zombieNormalDataBinding.Attack = true;
         _timer = 0;
@@ -29,7 +26,7 @@ public class ZombieNormal_AttackState : FSMState
         if (_timer >= _timeLimit)
         {
             //Apply damage for player
-            if (Vector3.Distance(parent.transform.position, _target.position) <= parent.radiusAttack)
+            if (Vector3.Distance(parent.transform.position, parent.target.position) <= parent.radiusAttack)
             {
                 parent.zombieNormalDataBinding.Attack = true;
                 _timer = 0;

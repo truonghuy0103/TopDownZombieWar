@@ -20,30 +20,30 @@ public class ZombieNormalSystem : ZombieSystem
     public override void OnSystemStart()
     {
         base.OnSystemStart();
-        AddState(idleState);
+        
         idleState.parent = this;
+        AddState(idleState);
         
-        AddState(runState);
         runState.parent = this;
+        AddState(runState);
         
-        AddState(attackState);
         attackState.parent = this;
+        AddState(attackState);
         
-        AddState(deadState);
         deadState.parent = this;
+        AddState(deadState);
     }
 
     public override void OnSetupZombie(object data)
     {
         base.OnSetupZombie(data);
         
+        target = GameObject.FindWithTag("Player").transform;
+        
         configEnemyData = data as ConfigEnemyData;
         navMeshAgent.speed = configEnemyData.speed;
         zombieHealth.SetupHP(configEnemyData.hp);
         damage = configEnemyData.damage;
-        
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-        GotoState(idleState);
     }
 
     public override void OnDamage(int damage)

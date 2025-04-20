@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Guns:
   - id: 1
-    name: Gun1
+    name: Auto
     rateOfFire: 0.2
     damage: 2
     clipSize: 30
     amountAmo: 90
     timeReload: 2
   - id: 2
-    name: Gun2
+    name: Shotgun
     rateOfFire: 1
     damage: 5
     clipSize: 10
