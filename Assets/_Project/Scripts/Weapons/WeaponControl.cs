@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 
 public delegate void ChangeGunHandle(WeaponBehaviour weaponBehaviour);
 
@@ -37,6 +38,9 @@ public class WeaponControl : MonoBehaviour
         _playerInput.OnFire -= OnCheckFire;
         _playerInput.OnFire += OnCheckFire;
 
+        OnReloadHandle -= OnReloadHandleEvent;
+        OnReloadHandle += OnReloadHandleEvent;
+
         _indexWeapon = -1;
     }
 
@@ -67,6 +71,18 @@ public class WeaponControl : MonoBehaviour
                 _playerInput.OnFire += OnCheckFire;
             }
         }
+    }
+    
+    public void OnReloadHandleEvent(float timer, Action callback)
+    {
+        float timeCountdown = 0;
+        DOTween.To(() => timeCountdown, x => timeCountdown = x, timer, timer).OnComplete(() =>
+        {
+            if (callback != null)
+            {
+                callback.Invoke();
+            }                
+        });
     }
 
     private void OnCheckFire(bool isFire)
