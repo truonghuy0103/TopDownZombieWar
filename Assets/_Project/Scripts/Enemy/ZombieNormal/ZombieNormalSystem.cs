@@ -17,6 +17,8 @@ public class ZombieNormalSystem : ZombieSystem
     public ZombieNormalDataBinding zombieNormalDataBinding;
 
     public ConfigEnemyData configEnemyData;
+    
+    public bool isDead = false;
     public override void OnSystemStart()
     {
         base.OnSystemStart();
@@ -44,13 +46,15 @@ public class ZombieNormalSystem : ZombieSystem
         navMeshAgent.speed = configEnemyData.speed;
         zombieHealth.SetupHP(configEnemyData.hp);
         damage = configEnemyData.damage;
+        
+        isDead = false;
     }
 
     public override void OnDamage(int damage)
     {
         base.OnDamage(damage);
         zombieHealth.TakeDamage(damage);
-        if (zombieHealth.currentHp <= 0)
+        if (zombieHealth.currentHp <= 0 && !isDead)
         {
             GotoState(deadState);
         }
@@ -59,6 +63,7 @@ public class ZombieNormalSystem : ZombieSystem
     public void ResetZombie()
     {
         zombieHealth.SetupHP(configEnemyData.hp);
+        isDead = false;
         GotoState(idleState);
     }
 }

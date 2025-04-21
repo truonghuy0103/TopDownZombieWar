@@ -10,6 +10,7 @@ public class ZombieNormal_DeadState : FSMState
     public override void OnEnter()
     {
         base.OnEnter();
+        parent.isDead = true;
         parent.zombieNormalDataBinding.Dead = true;
         _timer = 1;
     }
