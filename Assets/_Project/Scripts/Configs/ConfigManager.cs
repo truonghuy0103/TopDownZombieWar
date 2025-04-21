@@ -6,7 +6,6 @@ public class ConfigManager : SingletonMono<ConfigManager>
 {
     public ConfigGun configGun;
     public ConfigEnemy configEnemy;
-    public ConfigCharacter configCharacter;
     public ConfigMission configMission;
     public void InitConfig(Action callback)
     {
@@ -22,8 +21,6 @@ public class ConfigManager : SingletonMono<ConfigManager>
         yield return new WaitUntil(() => configGun != null);
         configEnemy = Resources.Load<ConfigEnemy>("Configs/ConfigEnemy");
         yield return new WaitUntil(() => configEnemy != null);
-        configCharacter = Resources.Load<ConfigCharacter>("Configs/ConfigCharacter");
-        yield return new WaitUntil(() => configCharacter != null);
         configMission = Resources.Load<ConfigMission>("Configs/ConfigMission");
         yield return new WaitUntil(() => configMission != null);
         
