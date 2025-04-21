@@ -1105,7 +1105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d70e73c51d4436595f88c5a6ec428a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerDataBinding: {fileID: 2813900365961985452}
   dir: {x: 0, y: 0}
 --- !u!114 &2363436393578864859
 MonoBehaviour:
@@ -1134,8 +1133,10 @@ MonoBehaviour:
   _characterController: {fileID: 533476106400123134}
   _playerDataBinding: {fileID: 2813900365961985452}
   _playerInput: {fileID: 8730216825487682526}
+  _playerHealth: {fileID: 2363436393578864859}
   _weaponControl: {fileID: 5857715122908362511}
   _speedMove: 2
+  _maxHP: 20
   _transModel: {fileID: 6815788160625983686}
 --- !u!143 &533476106400123134
 CharacterController:

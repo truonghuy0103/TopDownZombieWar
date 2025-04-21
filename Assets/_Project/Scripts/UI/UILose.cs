@@ -5,13 +5,26 @@ public class UILose : BaseUI
 {
     public void PlayAgainButtonClicked()
     {
+        int currentMission = GameManager.Instance.currentMission;
+        ConfigMissionData configMissionData = ConfigManager.Instance.configMission.GetMissionDataById(currentMission.ToString());
+        
         UIManager.Instance.HideUI(this);
-        GameManager.Instance.StartGameAgain();
+        
+        LoadSceneManager.Instance.OnLoadScene("Main", (obj) =>
+        {
+            LoadSceneManager.Instance.OnLoadScene(configMissionData.sceneName, (obj) =>
+            {
+                GameManager.Instance.SetupGameplay(currentMission);
+            });
+        });
     }
 
     public void HomeButtonClicked()
     {
         UIManager.Instance.HideAllUI();
-        UIManager.Instance.ShowUI(UIIndex.UIMainMenu);
+        LoadSceneManager.Instance.OnLoadScene("Main", (obj) =>
+        {
+            UIManager.Instance.ShowUI(UIIndex.UIMainMenu);
+        });
     }
 }

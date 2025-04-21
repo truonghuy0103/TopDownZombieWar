@@ -61,6 +61,7 @@ public class WeaponBehaviour : MonoBehaviour
             iWeapon.OnAttack(this);
             _soundWeapon.Play();
             PlayMuzzle();
+            _weaponControl.OnUpdateBullet();
         }
         else
         {

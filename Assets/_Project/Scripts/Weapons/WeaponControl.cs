@@ -32,16 +32,14 @@ public class WeaponControl : MonoBehaviour
     }
 
     private int _indexWeapon;
-
-    private void Start()
+    
+    public void SetupEventWeapon()
     {
         _playerInput.OnFire -= OnCheckFire;
         _playerInput.OnFire += OnCheckFire;
 
         OnReloadHandle -= OnReloadHandleEvent;
         OnReloadHandle += OnReloadHandleEvent;
-
-        _indexWeapon = -1;
     }
 
     public void PlayAttackAnimation()
@@ -128,5 +126,7 @@ public class WeaponControl : MonoBehaviour
             ConfigGunData configGunData = ConfigManager.Instance.configGun.GetGunById(indexGun.ToString());
             _listWeapons[i].OnSetupBehaviour(configGunData,this);
         }
+        
+        _indexWeapon = -1;
     }
 }

@@ -24,6 +24,7 @@ public class MissionControl : MonoBehaviour
 
         SetUpZombieNormalPool();
 
+        StopCoroutine(RunMission());
         StartCoroutine(RunMission());
     }
 
@@ -74,6 +75,9 @@ public class MissionControl : MonoBehaviour
 
     private void SetUpZombieNormalPool()
     {
+        if (_zomNormalPool.Count > 0)
+            return;
+        
         ConfigEnemyData configEnemyData = ConfigManager.Instance.configEnemy.GetEnemyDataById(1.ToString());
         for (int i = 0; i < _maxZomNormal; i++)
         {

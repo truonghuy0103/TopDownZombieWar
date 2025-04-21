@@ -6,13 +6,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CharacterController _characterController;
     [SerializeField] private PlayerDataBinding _playerDataBinding;
     [SerializeField] private PlayerInput _playerInput;
+    [SerializeField] private PlayerHealth _playerHealth;
     [SerializeField] private WeaponControl _weaponControl;
     [SerializeField] private float _speedMove = 2;
+    [SerializeField] private int _maxHP = 20;
     [SerializeField] private Transform _transModel;
-    public void OnSetupWeapon()
+    
+    public void OnSetupPlayer()
     {
+        _playerHealth.Setup(_maxHP);
+        _weaponControl.SetupEventWeapon();
         _weaponControl.SetupWeaponBehaviour();
-        _weaponControl.SwitchWeapon();
     }
     
     private void Update()
