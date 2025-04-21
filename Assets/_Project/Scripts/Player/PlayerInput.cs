@@ -4,8 +4,6 @@ using UnityEngine.Serialization;
 
 public class PlayerInput : MonoBehaviour
 {
-    [SerializeField] private PlayerDataBinding _playerDataBinding;
-
     public Vector2 dir;
     public event Action<bool> OnFire;
     private bool _isFire;

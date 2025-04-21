@@ -15,7 +15,11 @@ public class GameManager : SingletonMono<GameManager>
         Transform transMissionControl = GameObject.Find("MissionControl").transform;
         _missionControl = transMissionControl.GetComponent<MissionControl>();
 
-        _playerController.OnSetupWeapon();
+        PoolDefine.Instance.InitPool(() =>
+        {
+            _playerController.OnSetupWeapon();
+        });
+        
         _missionControl.OnSetupMission(mission);
     }
 

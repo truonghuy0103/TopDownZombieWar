@@ -4,7 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class MissionControl : SingletonMono<MissionControl>
+public class MissionControl : MonoBehaviour
 {
     [SerializeField] private List<Transform> listCreateZombiePositions = new List<Transform>();
     [SerializeField] private Transform _holderZombie;
@@ -17,10 +17,10 @@ public class MissionControl : SingletonMono<MissionControl>
     private ConfigMissionData _configMissionData;
     private Dictionary<ZombieType, float> _dictIntervals = new Dictionary<ZombieType, float>();
 
-    public void OnSetupMission()
+    public void OnSetupMission(int mission)
     {
         //Load Config Mission
-        _configMissionData = ConfigManager.Instance.configMission.GetMissionDataById(1.ToString());
+        _configMissionData = ConfigManager.Instance.configMission.GetMissionDataById(mission.ToString());
 
         SetUpZombieNormalPool();
 

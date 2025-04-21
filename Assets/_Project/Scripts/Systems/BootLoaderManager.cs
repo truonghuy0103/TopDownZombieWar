@@ -15,13 +15,10 @@ public class BootLoaderManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         ConfigManager.Instance.InitConfig(() =>
         {
-            PoolDefine.Instance.InitPool((() =>
+            UIManager.Instance.Init(() =>
             {
-                UIManager.Instance.Init(() =>
-                {
-                    UIManager.Instance.ShowUI(UIIndex.UIMainMenu);
-                });
-            }));
+                UIManager.Instance.ShowUI(UIIndex.UIMainMenu);
+            });
         });
     }
 }

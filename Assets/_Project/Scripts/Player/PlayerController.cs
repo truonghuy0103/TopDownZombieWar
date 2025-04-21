@@ -9,16 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private WeaponControl _weaponControl;
     [SerializeField] private float _speedMove = 2;
     [SerializeField] private Transform _transModel;
-    
-    private void Awake()
-    {
-        ConfigManager.Instance.InitConfig(() =>
-        {
-            PoolDefine.Instance.InitPool(OnSetupWeapon);
-            MissionControl.Instance.OnSetupMission();
-        });
-    }
-
     public void OnSetupWeapon()
     {
         _weaponControl.SetupWeaponBehaviour();

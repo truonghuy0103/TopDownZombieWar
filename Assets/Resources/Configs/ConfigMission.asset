@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missions:
   - id: 1
+    sceneName: TestCharacter
     duration: 180
     phases:
     - id: 1

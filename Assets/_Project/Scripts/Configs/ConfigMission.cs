@@ -18,6 +18,7 @@ public class ConfigMission : ScriptableObject
 public class ConfigMissionData
 {
     public string id;
+    public string sceneName;
     public float duration;
     public List<ConfigPhaseData> phases = new List<ConfigPhaseData>();
 }
