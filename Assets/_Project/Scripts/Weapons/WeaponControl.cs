@@ -111,6 +111,7 @@ public class WeaponControl : MonoBehaviour
         
         _listWeapons[_indexWeapon].gameObject.SetActive(true);
         _currentWeapon = _listWeapons[_indexWeapon];
+        _currentWeapon.ResetMuzzle();
         
         if (OnChangeGunHandle != null)
         {
