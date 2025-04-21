@@ -16,14 +16,14 @@ MonoBehaviour:
   - id: 1
     name: Auto
     rateOfFire: 0.2
-    damage: 2
+    damage: 5
     clipSize: 30
     amountAmo: 90
     timeReload: 2
   - id: 2
     name: Shotgun
     rateOfFire: 1
-    damage: 5
+    damage: 10
     clipSize: 10
     amountAmo: 30
     timeReload: 2

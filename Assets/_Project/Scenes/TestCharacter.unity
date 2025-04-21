@@ -834,7 +834,8 @@ MonoBehaviour:
   - {fileID: 678472509}
   - {fileID: 1636926349}
   - {fileID: 1009872923}
-  maxZombieCount: 10
+  _zomNromalPrefab: {fileID: 2236669422340225020, guid: 700c9c7af496d4d66ad75b6f2fc96b39, type: 3}
+  _zomNormalSize: 10
 --- !u!1 &1565058504
 GameObject:
   m_ObjectHideFlags: 0

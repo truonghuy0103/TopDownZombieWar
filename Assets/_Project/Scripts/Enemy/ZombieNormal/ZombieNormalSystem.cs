@@ -55,4 +55,10 @@ public class ZombieNormalSystem : ZombieSystem
             GotoState(deadState);
         }
     }
+
+    public void ResetZombie()
+    {
+        zombieHealth.SetupHP(configEnemyData.hp);
+        GotoState(idleState);
+    }
 }

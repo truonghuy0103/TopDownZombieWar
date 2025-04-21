@@ -1,55 +1,89 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MissionControl : SingletonMono<MissionControl>
 {
     public List<Transform> listCreateZombiePositions = new List<Transform>();
-    public int maxZombieCount = 10;
-    private int _currentZombieCount = 0;
-    
-    private int _idZombie = 1;
-    private float _timeCountdownCreate = 3;
+
+    [SerializeField] private ZombieNormalSystem _zomNromalPrefab;
+    [SerializeField] private int _maxZomNormal = 10;
+    private Queue<ZombieNormalSystem> _zomNormalPool = new Queue<ZombieNormalSystem>();
+    private int _countZomNormal = 0;
+
+    private float _timeCountdownCreate = 3f;
 
     public void OnSetupMission()
     {
         //Load Config Mission
-        _currentZombieCount = 0;
         
-        StartCoroutine(DelayCreateZombie());
+        SetUpZombieNormalPool();
+
+        StartCoroutine(SpawnZombieNormal());
     }
 
-    private void CreateZombie(int idZombie)
+    IEnumerator SpawnZombieNormal()
+    {
+        while (_countZomNormal < _maxZomNormal)
+        {
+            yield return new WaitForSeconds(_timeCountdownCreate);
+            CreateZombieNormal();
+        }
+    }
+
+    private void SetUpZombieNormalPool()
+    {
+        ConfigEnemyData configEnemyData = ConfigManager.Instance.configEnemy.GetEnemyDataById(1.ToString());
+        for (int i = 0; i < _maxZomNormal; i++)
+        {
+            ZombieNormalSystem zombieNormal = Instantiate(_zomNromalPrefab);
+            zombieNormal.gameObject.SetActive(false);
+            zombieNormal.OnSetupZombie(configEnemyData);
+            zombieNormal.OnZombieDead += OnZombieDeadCallback;
+            _zomNormalPool.Enqueue(zombieNormal);
+        }
+    }
+
+    private ZombieNormalSystem GetZombieNormalFromPool()
+    {
+        ZombieNormalSystem zombie = _zomNormalPool.Dequeue();
+        zombie.gameObject.SetActive(true);
+        _countZomNormal++;
+        return zombie;
+    }
+
+    private void ReturnZombieNormalToPool(ZombieNormalSystem zombie)
+    {
+        zombie.ResetZombie();
+        zombie.gameObject.SetActive(false);
+        _zomNormalPool.Enqueue(zombie);
+        _countZomNormal--;
+    }
+
+    private void OnZombieDeadCallback(ZombieSystem zombieNormal)
+    {
+        ReturnZombieNormalToPool(zombieNormal as ZombieNormalSystem);
+        if (_countZomNormal < _maxZomNormal)
+        {
+            StartCoroutine(DelayCreateZombie());
+        }
+    }
+
+    private void CreateZombieNormal()
     {
         int randomPosition = Random.Range(0, listCreateZombiePositions.Count);
         Transform positionToSpawn = listCreateZombiePositions[randomPosition];
-        
-        ConfigEnemyData configEnemyData = ConfigManager.Instance.configEnemy.GetEnemyDataById(idZombie.ToString());
 
-        GameObject goEnemy = Instantiate(configEnemyData.prefab);
-        ZombieNormalSystem zombieNormalSystem = goEnemy.GetComponent<ZombieNormalSystem>();
-        zombieNormalSystem.transform.position = positionToSpawn.position;
-        zombieNormalSystem.OnSetupZombie(configEnemyData);
-        zombieNormalSystem.OnZombieDead += OnZombieDeadCallback;
+        ZombieNormalSystem zombieNormal = GetZombieNormalFromPool();
+        zombieNormal.transform.position = positionToSpawn.position;
     }
-
-    private void OnZombieDeadCallback(ZombieSystem zombieSystem)
-    {
-        _currentZombieCount++;
-        if (_currentZombieCount < maxZombieCount)
-        {
-            //Create zombie
-            StartCoroutine(DelayCreateZombie());
-        }
-        else
-        {
-            Debug.Log("You win");
-        }
-    }
-
+    
     IEnumerator DelayCreateZombie()
     {
         yield return new WaitForSeconds(_timeCountdownCreate);
-        CreateZombie(_idZombie);
+        CreateZombieNormal();
     }
+    
+    
 }

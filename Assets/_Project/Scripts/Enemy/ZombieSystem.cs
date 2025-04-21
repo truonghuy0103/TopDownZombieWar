@@ -22,6 +22,6 @@ public class ZombieSystem : FSMSystem
         {
             OnZombieDead.Invoke(this);
         }
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
