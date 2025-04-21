@@ -735,6 +735,7 @@ MonoBehaviour:
   configGun: {fileID: 0}
   configEnemy: {fileID: 0}
   configCharacter: {fileID: 0}
+  configMission: {fileID: 0}
 --- !u!4 &718855478
 Transform:
   m_ObjectHideFlags: 0
@@ -749,6 +750,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &954521391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954521392}
+  m_Layer: 0
+  m_Name: HolderEnemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &954521392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954521391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1090634661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1009872922
 GameObject:
@@ -815,6 +847,7 @@ Transform:
   - {fileID: 678472509}
   - {fileID: 1636926349}
   - {fileID: 1009872923}
+  - {fileID: 954521392}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1090634662
@@ -834,8 +867,9 @@ MonoBehaviour:
   - {fileID: 678472509}
   - {fileID: 1636926349}
   - {fileID: 1009872923}
+  _holderZombie: {fileID: 954521392}
   _zomNromalPrefab: {fileID: 2236669422340225020, guid: 700c9c7af496d4d66ad75b6f2fc96b39, type: 3}
-  _zomNormalSize: 10
+  _maxZomNormal: 50
 --- !u!1 &1565058504
 GameObject:
   m_ObjectHideFlags: 0

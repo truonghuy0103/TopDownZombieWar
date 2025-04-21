@@ -16,7 +16,7 @@ MonoBehaviour:
   - id: 1
     name: Auto
     rateOfFire: 0.2
-    damage: 5
+    damage: 10
     clipSize: 30
     amountAmo: 90
     timeReload: 2

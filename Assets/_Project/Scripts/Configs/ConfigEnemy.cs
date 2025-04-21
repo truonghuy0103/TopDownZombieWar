@@ -18,10 +18,16 @@ public class ConfigEnemy : ScriptableObject
 public class ConfigEnemyData
 {
     public string id;
-    public string name;
+    public ZombieType type;
     public int hp;
     public int damage;
     public float speed;
     public float rateOfAttack;
     public GameObject prefab;
+}
+
+public enum ZombieType
+{
+    Normal = 0,
+    Boss = 1,
 }

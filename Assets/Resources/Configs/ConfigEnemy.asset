@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemies:
   - id: 1
-    name: ZombieNormal
+    type: 0
     hp: 10
     damage: 1
     speed: 3
     rateOfAttack: 1.5
     prefab: {fileID: 1348094694853950105, guid: 700c9c7af496d4d66ad75b6f2fc96b39, type: 3}
   - id: 2
-    name: ZombieBoss
+    type: 1
     hp: 20
     damage: 5
     speed: 2
