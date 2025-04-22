@@ -11,7 +11,8 @@ public class ZombieNormalSystem : ZombieSystem
     
     public NavMeshAgent navMeshAgent;
     public float radiusAttack = 2;
-    public Transform target;
+    public Transform player;
+    public PlayerHealth playerHealth;
     
     public ZombieHealth zombieHealth;
     public ZombieNormalDataBinding zombieNormalDataBinding;
@@ -40,7 +41,12 @@ public class ZombieNormalSystem : ZombieSystem
     {
         base.OnSetupZombie(data);
         
-        target = GameObject.FindWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
+        playerHealth = player.GetComponent<PlayerHealth>();
+        if (playerHealth == null)
+        {
+            playerHealth = player.GetComponentInParent<PlayerHealth>();
+        }
         
         configEnemyData = data as ConfigEnemyData;
         navMeshAgent.speed = configEnemyData.speed;

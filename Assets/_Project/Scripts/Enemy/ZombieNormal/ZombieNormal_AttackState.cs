@@ -25,11 +25,12 @@ public class ZombieNormal_AttackState : FSMState
         _timer += Time.deltaTime;
         if (_timer >= _timeLimit)
         {
-            //Apply damage for player
-            if (Vector3.Distance(parent.transform.position, parent.target.position) <= parent.radiusAttack)
+            if (Vector3.Distance(parent.transform.position, parent.player.position) <= parent.radiusAttack)
             {
                 parent.zombieNormalDataBinding.Attack = true;
                 _timer = 0;
+                //Apply damage for player
+                parent.playerHealth.OnDamage(parent.damage);
             }
             else
             {

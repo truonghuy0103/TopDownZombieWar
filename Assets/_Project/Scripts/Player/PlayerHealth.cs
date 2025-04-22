@@ -17,6 +17,14 @@ public class PlayerHealth : MonoBehaviour
     public void OnDamage(int damage)
     {
         _currentHP -= damage;
+        
+        Transform blood = PoolManager.Instance.dictPools[NamePool.PoolBloodPlayer.ToString()].GetObjectInstance();
+        if (blood != null)
+        {
+            blood.position = transform.position;
+            blood.forward = transform.forward;
+        }
+        
         if (OnHPChanged != null)
         {
             OnHPChanged.Invoke(_currentHP, _maxHP);

@@ -18,8 +18,8 @@ public class ZombieNormal_RunState : FSMState
     public override void OnUpdate()
     {
         base.OnUpdate();
-        parent.navMeshAgent.SetDestination(parent.target.position);
-        if (Vector3.Distance(parent.transform.position, parent.target.position) <= parent.radiusAttack)
+        parent.navMeshAgent.SetDestination(parent.player.position);
+        if (Vector3.Distance(parent.transform.position, parent.player.position) <= parent.radiusAttack)
         {
             parent.GotoState(parent.attackState);
         }

@@ -10,6 +10,9 @@ public class PoolDefine : SingletonMono<PoolDefine>
       
       Transform transImpactEnemy = Resources.Load<Transform>("Pools/ImpactEnemy") as Transform;
       CreatePool(NamePool.PoolImpactEnemy,50,transImpactEnemy);
+      
+      Transform transBloodPlayer = Resources.Load<Transform>("Pools/BloodPlayer") as Transform;
+      CreatePool(NamePool.PoolBloodPlayer,10,transBloodPlayer);
 
       if (callback != null)
       {
@@ -30,5 +33,6 @@ public class PoolDefine : SingletonMono<PoolDefine>
 public enum NamePool
 {
    PoolBulletAuto = 0,
-   PoolImpactEnemy = 1
+   PoolImpactEnemy = 1,
+   PoolBloodPlayer = 2,
 }
