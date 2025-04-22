@@ -69,7 +69,7 @@ public class UIInGame : MonoBehaviour
             });
 
         float timeCount = timeReload;
-        DOTween.To(() => timeCount, x => timeCount = x, 0, timeReload).OnComplete(() =>
+        DOTween.To(() => timeCount, x => timeCount = x, 0, timeReload).OnUpdate(() =>
         {
             _txtTimeReload.text = timeCount.ToString("F1");
         });
