@@ -17,13 +17,13 @@ MonoBehaviour:
     type: 0
     hp: 10
     damage: 1
-    speed: 3
+    speed: 2
     rateOfAttack: 1.5
     prefab: {fileID: 1348094694853950105, guid: 700c9c7af496d4d66ad75b6f2fc96b39, type: 3}
   - id: 2
     type: 1
     hp: 20
     damage: 5
-    speed: 2
+    speed: 1
     rateOfAttack: 2
-    prefab: {fileID: 0}
+    prefab: {fileID: 2721774920188599810, guid: 385e84b2577fc460d9309dc718cc998c, type: 3}

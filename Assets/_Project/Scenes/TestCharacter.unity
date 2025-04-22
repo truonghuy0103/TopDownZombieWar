@@ -1299,6 +1299,8 @@ MonoBehaviour:
   _holderZombie: {fileID: 954521392}
   _zomNromalPrefab: {fileID: 2236669422340225020, guid: 700c9c7af496d4d66ad75b6f2fc96b39, type: 3}
   _maxZomNormal: 50
+  _zomBossPrefab: {fileID: 4955889251431367885, guid: 385e84b2577fc460d9309dc718cc998c, type: 3}
+  _maxZomBoss: 5
 --- !u!1 &1503700926
 GameObject:
   m_ObjectHideFlags: 0
