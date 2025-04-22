@@ -18,12 +18,14 @@ MonoBehaviour:
     rateOfFire: 0.2
     damage: 10
     clipSize: 30
-    amountAmo: 90
+    amountAmo: 9999
     timeReload: 2
+    speed: 20
   - id: 2
     name: Shotgun
     rateOfFire: 1
     damage: 10
     clipSize: 10
-    amountAmo: 30
+    amountAmo: 9999
     timeReload: 2
+    speed: 20

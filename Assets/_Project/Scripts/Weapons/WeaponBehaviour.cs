@@ -14,6 +14,7 @@ public class WeaponBehaviour : MonoBehaviour
     public int currentBullet;
     public int amountAmo;
     public int damage;
+    public float speed;
 
     [SerializeField] private GameObject _goMuzzle;
 
@@ -33,6 +34,7 @@ public class WeaponBehaviour : MonoBehaviour
         currentBullet = clipSize;
         amountAmo = _configGunData.amountAmo;
         damage = _configGunData.damage;
+        speed = _configGunData.speed;
 
         _timer = 0;
         

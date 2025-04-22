@@ -24,4 +24,5 @@ public class ConfigGunData
     public int clipSize;
     public int amountAmo;
     public float timeReload;
+    public float speed;
 }

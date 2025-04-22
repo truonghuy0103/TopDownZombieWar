@@ -14,7 +14,7 @@ public class AutoAction : IWeapon
        dir.y = 0;
        dir.Normalize();
        transBullet.up = dir;
-       transBullet.GetComponent<AutoBullet>().OnShoot(10, dir, _autoWeapon.damage);
+       transBullet.GetComponent<AutoBullet>().OnShoot(_autoWeapon.speed, dir, _autoWeapon.damage);
        
        _autoWeapon.currentBullet--;
     }
