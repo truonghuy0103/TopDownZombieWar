@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ShotgunBullet : MonoBehaviour
@@ -6,6 +8,8 @@ public class ShotgunBullet : MonoBehaviour
     private float _speed;
     [SerializeField] private LayerMask _layerMask;
     private Vector3 _direction;
+    private HashSet<GameObject> _hitEnemies = new HashSet<GameObject>();
+    private float _lifeTime = 2f;
 
     public void OnShoot(float speed, Vector3 direction, int damage)
     {
@@ -13,33 +17,43 @@ public class ShotgunBullet : MonoBehaviour
         _damage = damage;
         _speed = speed;
         _direction = direction;
+        
+        _hitEnemies.Clear();
+    }
+    
+    private void OnEnable()
+    {
+        CancelInvoke(nameof(ReturnBulletToPool));
+        Invoke(nameof(ReturnBulletToPool), _lifeTime);
+    }
+
+    private void OnDisable()
+    {
+        CancelInvoke(nameof(ReturnBulletToPool));
     }
 
     private void Update()
     {
         float moveDistance = _speed * Time.deltaTime;
         transform.Translate(Vector3.forward * moveDistance);
-        RaycastHit[] hits = Physics.RaycastAll(transform.position, _direction, moveDistance + 0.1f);
-        if (hits != null && hits.Length > 0)
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy") && !_hitEnemies.Contains(other.gameObject))
         {
-            OnHit(hits);
+            _hitEnemies.Add(other.gameObject);
+
+            other.GetComponent<ZombieOnDamage>()?.ApplyDamage(_damage);
+
+            Transform impact = PoolManager.Instance.dictPools[NamePool.PoolImpactEnemy.ToString()].GetObjectInstance();
+            impact.position = other.transform.position;
+            impact.forward = other.transform.forward;
         }
     }
 
-    private void OnHit(RaycastHit[] hitInfo)
+    private void ReturnBulletToPool()
     {
-        foreach (var hit in hitInfo)
-        {
-            if (hit.collider.CompareTag("Enemy"))
-            {
-                hit.collider.GetComponent<ZombieOnDamage>()?.ApplyDamage(_damage);
-                
-                Transform impact = PoolManager.Instance.dictPools[NamePool.PoolImpactEnemy.ToString()].GetObjectInstance();
-                impact.position = hit.point;
-                impact.forward = hit.normal;
-            }
-        }
-        
-        //PoolManager.Instance.dictPools[NamePool.PoolBulletShotgun.ToString()].DisableObjectPool(gameObject);
+        PoolManager.Instance.dictPools[NamePool.PoolBulletShotgun.ToString()].DisableObjectPool(gameObject);
     }
 }

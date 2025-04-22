@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class AutoBullet : MonoBehaviour
     [SerializeField] private LayerMask _layerMask;
     private Vector3 _direction;
     private RaycastHit _hit;
+    private float _lifeTime = 2f;
 
     public void OnShoot(float speed, Vector3 direction, int damage)
     {
@@ -15,6 +17,17 @@ public class AutoBullet : MonoBehaviour
         _damage = damage;
         _speed = speed;
         _direction = direction;
+    }
+
+    private void OnEnable()
+    {
+        CancelInvoke(nameof(ReturnBulletToPool));
+        Invoke(nameof(ReturnBulletToPool), _lifeTime);
+    }
+
+    private void OnDisable()
+    {
+        CancelInvoke(nameof(ReturnBulletToPool));
     }
 
     private void Update()
@@ -43,8 +56,13 @@ public class AutoBullet : MonoBehaviour
         {
             impact.position = _hit.point;
             impact.forward = _hit.normal;
-            PoolManager.Instance.dictPools[NamePool.PoolBulletAuto.ToString()].DisableObjectPool(gameObject);
+            ReturnBulletToPool();
         }
+    }
+
+    private void ReturnBulletToPool()
+    {
+        PoolManager.Instance.dictPools[NamePool.PoolBulletAuto.ToString()].DisableObjectPool(gameObject);
     }
     
 }
