@@ -11,6 +11,7 @@ public class VariableJoystick : Joystick
     [SerializeField] private JoystickType joystickType = JoystickType.Fixed;
 
     private Vector2 fixedPosition = Vector2.zero;
+    public bool isFire = false;
 
     public void SetMode(JoystickType joystickType)
     {
@@ -38,6 +39,7 @@ public class VariableJoystick : Joystick
             background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
             background.gameObject.SetActive(true);
         }
+        isFire = true;
         base.OnPointerDown(eventData);
     }
 
@@ -45,7 +47,7 @@ public class VariableJoystick : Joystick
     {
         if(joystickType != JoystickType.Fixed)
             background.gameObject.SetActive(false);
-
+        isFire = false;
         base.OnPointerUp(eventData);
     }
 

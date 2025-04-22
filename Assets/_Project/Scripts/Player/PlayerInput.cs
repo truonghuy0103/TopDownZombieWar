@@ -5,8 +5,12 @@ using UnityEngine.Serialization;
 public class PlayerInput : MonoBehaviour
 {
     public Vector2 dir;
+    public Vector2 dirFire;
     public event Action<bool> OnFire;
     private bool _isFire;
+    
+    public VariableJoystick joystickMove;
+    public VariableJoystick joystickFire;
 
     public bool IsFire
     {
@@ -23,16 +27,28 @@ public class PlayerInput : MonoBehaviour
     
     private void Update()
     { 
-        dir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        Vector3 dirKeyboard = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        Vector3 dirJoystick = joystickMove.Direction;
         
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            IsFire = true;          
+            IsFire = true;
+        }
+        else
+        {
+            IsFire = joystickFire.isFire;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             IsFire = false;
         }
+        else
+        {
+            IsFire = joystickFire.isFire;
+        }
+        
+        dir = dirKeyboard + dirJoystick;
+        dirFire = joystickFire.Direction;
     }
 }

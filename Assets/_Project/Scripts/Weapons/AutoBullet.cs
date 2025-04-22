@@ -19,8 +19,9 @@ public class AutoBullet : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.forward * _speed * Time.deltaTime);
-        Physics.Raycast(transform.position, _direction, out _hit, 0.5f);
+        float moveDistance = _speed * Time.deltaTime;
+        transform.Translate(Vector3.forward * moveDistance);
+        Physics.Raycast(transform.position, _direction, out _hit, moveDistance + 0.1f);
         if (_hit.collider != null)
         {
             Debug.Log("Hit: " + _hit.collider.name);

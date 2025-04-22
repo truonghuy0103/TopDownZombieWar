@@ -22,19 +22,19 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Vector3 moveDir = new Vector3(_playerInput.dir.x, 0, _playerInput.dir.y);
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, 999))
+        Vector3 fireDir = new Vector3(_playerInput.dirFire.x, 0, _playerInput.dirFire.y);
+
+        if (fireDir.magnitude > 0)
         {
-            Vector3 target = hitInfo.point;
-            target.y = _transModel.position.y;
-            _transModel.LookAt(target);
+            fireDir.Normalize();
+            _transModel.forward = fireDir;
         }
         
         if (moveDir.magnitude > 0)
         {
             moveDir.Normalize();
             //_transModel.forward = moveDir;
-            _characterController.Move(moveDir * (Time.deltaTime * _speedMove));
+            _characterController.Move(moveDir * Time.deltaTime * _speedMove);
         }
         _playerDataBinding.Speed = moveDir.magnitude;
     }

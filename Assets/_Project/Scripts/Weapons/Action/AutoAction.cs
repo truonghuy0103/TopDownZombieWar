@@ -11,6 +11,7 @@ public class AutoAction : IWeapon
        transBullet.position = _autoWeapon.posShoot.position;
 
        Vector3 dir = _autoWeapon.aimPosShoot.position - _autoWeapon.posShoot.position;
+       dir.y = 0;
        dir.Normalize();
        transBullet.up = dir;
        transBullet.GetComponent<AutoBullet>().OnShoot(10, dir, _autoWeapon.damage);

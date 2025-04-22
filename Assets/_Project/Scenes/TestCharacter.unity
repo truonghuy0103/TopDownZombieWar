@@ -511,22 +511,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2512468180034297966, guid: 8bf6960927ddb4f8d8734d3f7c68c3ce, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512468180034297966, guid: 8bf6960927ddb4f8d8734d3f7c68c3ce, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512468180034297966, guid: 8bf6960927ddb4f8d8734d3f7c68c3ce, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.99636734
-      objectReference: {fileID: 0}
-    - target: {fileID: 2512468180034297966, guid: 8bf6960927ddb4f8d8734d3f7c68c3ce, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278255614
-      objectReference: {fileID: 0}
     - target: {fileID: 2922690127504514526, guid: 8bf6960927ddb4f8d8734d3f7c68c3ce, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -896,12 +880,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackerSettings:
-    BindingMode: 5
+    BindingMode: 4
     PositionDamping: {x: 1, y: 1, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 0, y: 0, z: 0}
     QuaternionDamping: 0
-  FollowOffset: {x: 0, y: 25, z: -0}
+  FollowOffset: {x: 0, y: 25, z: 0}
 --- !u!114 &440695922
 MonoBehaviour:
   m_ObjectHideFlags: 0
