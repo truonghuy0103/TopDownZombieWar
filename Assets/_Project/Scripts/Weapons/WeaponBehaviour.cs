@@ -84,7 +84,8 @@ public class WeaponBehaviour : MonoBehaviour
     {
         _goMuzzle.SetActive(true);
         _goMuzzle.transform.localRotation = Quaternion.Euler(0, 90, Random.Range(0, 180));
-        yield return new WaitForSeconds(rateOfFire);
+        float delta = rateOfFire / 10;
+        yield return new WaitForSeconds(rateOfFire - delta);
         _goMuzzle.SetActive(false);
     }
 

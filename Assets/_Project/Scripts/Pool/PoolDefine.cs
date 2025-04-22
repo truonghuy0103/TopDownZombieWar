@@ -13,6 +13,9 @@ public class PoolDefine : SingletonMono<PoolDefine>
       
       Transform transBloodPlayer = Resources.Load<Transform>("Pools/BloodPlayer") as Transform;
       CreatePool(NamePool.PoolBloodPlayer,10,transBloodPlayer);
+      
+      Transform transBulletShotgun = Resources.Load<Transform>("Pools/BulletShotgun") as Transform;
+      CreatePool(NamePool.PoolBulletShotgun,10,transBulletShotgun);
 
       if (callback != null)
       {
@@ -35,4 +38,5 @@ public enum NamePool
    PoolBulletAuto = 0,
    PoolImpactEnemy = 1,
    PoolBloodPlayer = 2,
+   PoolBulletShotgun = 3,
 }
