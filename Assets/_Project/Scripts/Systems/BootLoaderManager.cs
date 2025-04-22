@@ -13,12 +13,15 @@ public class BootLoaderManager : MonoBehaviour
     IEnumerator Start()
     {
         yield return new WaitForSeconds(0.1f);
-        ConfigManager.Instance.InitConfig(() =>
+        UIManager.Instance.Init(() =>
         {
-            UIManager.Instance.Init(() =>
+            UIManager.Instance.ShowUI(UIIndex.UILoading);
+            ConfigManager.Instance.InitConfig(() =>
             {
+                UIManager.Instance.HideUI(UIIndex.UILoading);
                 UIManager.Instance.ShowUI(UIIndex.UIMainMenu);
             });
         });
+        
     }
 }

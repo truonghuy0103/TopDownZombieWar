@@ -103,6 +103,7 @@ namespace Core
         UIMainMenu,
         UIWin,
         UILose,
+        UILoading,
         COUNT
     }
 }
