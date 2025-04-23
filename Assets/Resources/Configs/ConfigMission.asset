@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missions:
   - id: 1
-    sceneName: TestCharacter
+    sceneName: Map_1
     duration: 180
     phases:
     - id: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
       - type: 0
         spawnInterval: 3
   - id: 2
-    sceneName: TestCharacter
+    sceneName: Map_1
     duration: 180
     phases:
     - id: 1
