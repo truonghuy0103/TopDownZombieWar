@@ -6,3 +6,6 @@ Logs
 UserSettings
 .idea
 obj
+.utmp
+Build
+.DS_Store
