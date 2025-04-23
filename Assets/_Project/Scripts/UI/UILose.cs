@@ -3,6 +3,16 @@ using UnityEngine;
 
 public class UILose : BaseUI
 {
+    public override void OnSetUp(UIParam param = null)
+    {
+        base.OnSetUp(param);
+        
+        LoadSceneManager.Instance.OnLoadScene("Main", (obj) =>
+        {
+            
+        });
+    }
+
     public void PlayAgainButtonClicked()
     {
         int currentMission = GameManager.Instance.currentMission;
@@ -11,24 +21,16 @@ public class UILose : BaseUI
         UIManager.Instance.HideUI(this);
         UIManager.Instance.ShowUI(UIIndex.UILoading);
         
-        LoadSceneManager.Instance.OnLoadScene("Main", (obj) =>
+        LoadSceneManager.Instance.OnLoadScene(configMissionData.sceneName, (obj) =>
         {
-            LoadSceneManager.Instance.OnLoadScene(configMissionData.sceneName, (obj) =>
-            {
-                GameManager.Instance.SetupGameplay(currentMission);
-                UIManager.Instance.HideUI(UIIndex.UILoading);
-            });
+            GameManager.Instance.SetupGameplay(currentMission);
+            UIManager.Instance.HideUI(UIIndex.UILoading);
         });
     }
 
     public void HomeButtonClicked()
     {
         UIManager.Instance.HideAllUI();
-        UIManager.Instance.ShowUI(UIIndex.UILoading);
-        LoadSceneManager.Instance.OnLoadScene("Main", (obj) =>
-        {
-            UIManager.Instance.HideUI(UIIndex.UILoading);
-            UIManager.Instance.ShowUI(UIIndex.UIMainMenu);
-        });
+        UIManager.Instance.ShowUI(UIIndex.UIMainMenu);
     }
 }

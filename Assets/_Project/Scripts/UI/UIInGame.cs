@@ -114,4 +114,9 @@ public class UIInGame : MonoBehaviour
         _weaponControl.SwitchWeapon();
     }
 
+    public void PauseButtonClicked()
+    {
+        UIManager.Instance.ShowUI(UIIndex.UIPause);
+    }
+
 }

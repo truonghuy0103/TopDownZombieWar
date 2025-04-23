@@ -104,6 +104,7 @@ namespace Core
         UIWin,
         UILose,
         UILoading,
+        UIPause,
         COUNT
     }
 }
