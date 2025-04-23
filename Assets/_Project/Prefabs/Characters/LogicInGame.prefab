@@ -2603,7 +2603,7 @@ MonoBehaviour:
   _playerInput: {fileID: 5021929119469962718}
   _playerHealth: {fileID: 5598833524854106038}
   _weaponControl: {fileID: 2081944895513445263}
-  _speedMove: 2
+  _speedMove: 3
   _maxHP: 20
   _transModel: {fileID: 7772986755953036032}
 --- !u!114 &5598833524854106038
