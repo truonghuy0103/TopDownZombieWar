@@ -439,6 +439,12 @@ MonoBehaviour:
     soundFxClip: {fileID: 8300000, guid: b63197fc634774046ac0d30af3df9197, type: 3}
   - soundFxIndex: 7
     soundFxClip: {fileID: 8300000, guid: 209bfd34436e58940bda452ec258a14d, type: 3}
+  - soundFxIndex: 9
+    soundFxClip: {fileID: 8300000, guid: d43b3f96e26928743802439d178c70df, type: 3}
+  - soundFxIndex: 10
+    soundFxClip: {fileID: 8300000, guid: 3c40ab51ffd84f94f8e9cbcb0bf84b89, type: 3}
+  - soundFxIndex: 8
+    soundFxClip: {fileID: 8300000, guid: 606417d98409ef140abfee0e530e2ca7, type: 3}
   _lsBGMs:
   - {fileID: 8300000, guid: dcb924906cd304145aaa7eeeeba986f2, type: 3}
   - {fileID: 8300000, guid: d93a4c6a812648448bdd0a53e001be6b, type: 3}
@@ -865,7 +871,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801300536}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &801300538
 Camera:
   m_ObjectHideFlags: 0

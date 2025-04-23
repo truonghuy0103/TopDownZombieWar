@@ -11,19 +11,23 @@ public class UIInGame : MonoBehaviour
 {
     [SerializeField] private PlayerHealth _playerHealth;
     [SerializeField] private WeaponControl _weaponControl;
+    [SerializeField] private GrenadeControl _grenadeControl;
 
     [SerializeField] private GameObject _reloadContent;
 
     [SerializeField] private Image _imgReloadProgress;
     [SerializeField] private Image _imgHPProgress;
+    [SerializeField] private Image _imgGrenadeProgress;
 
     [SerializeField] private TMP_Text _txtTimeReload;
     [SerializeField] private TMP_Text _txtAmo;
     [SerializeField] private TMP_Text _txtTimeRemain;
+    [SerializeField] private TMP_Text _txtGrenadeRemain;
     
     private WeaponBehaviour _weaponBehaviour;
 
     private float _timeRemain;
+    private bool _isGrenadeReady = true;
     
     public void SetupUIInGame()
     {
@@ -34,6 +38,10 @@ public class UIInGame : MonoBehaviour
         _weaponControl.OnChangeGunHandle += ChangeGunHandle;
         _weaponControl.SwitchWeapon();
         _reloadContent.SetActive(false);
+
+        _grenadeControl.OnGrenedaThrown -= OnGrenadeReloadHandle;
+        _grenadeControl.OnGrenedaThrown += OnGrenadeReloadHandle;
+        _txtGrenadeRemain.text = "Bomb";
         
         int currentMission = GameManager.Instance.currentMission;
         ConfigMissionData configMissionData = ConfigManager.Instance.configMission.GetMissionDataById(currentMission.ToString());
@@ -72,6 +80,29 @@ public class UIInGame : MonoBehaviour
         DOTween.To(() => timeCount, x => timeCount = x, 0, timeReload).OnUpdate(() =>
         {
             _txtTimeReload.text = timeCount.ToString("F1");
+        });
+    }
+    
+    private void OnGrenadeReloadHandle(float timeReload)
+    {
+        float fillAmount = 0;
+        DOTween.To(() => fillAmount, x => fillAmount = x, 1, timeReload)
+            .OnComplete(() =>
+            {
+                _isGrenadeReady = true;
+                SoundManager.Instance.PlaySoundSFX(SoundFXIndex.FragGrenadeReady);
+            }).OnUpdate(() =>
+            {
+                _imgGrenadeProgress.fillAmount = fillAmount;
+            });
+
+        float timeCount = timeReload;
+        DOTween.To(() => timeCount, x => timeCount = x, 0, timeReload).OnUpdate(() =>
+        {
+            _txtGrenadeRemain.text = timeCount.ToString("F1");
+        }).OnComplete(() =>
+        {
+            _txtGrenadeRemain.text = "Bomb";
         });
     }
 
@@ -119,6 +150,16 @@ public class UIInGame : MonoBehaviour
     {
         SoundManager.Instance.PlaySoundSFX(SoundFXIndex.Click);
         UIManager.Instance.ShowUI(UIIndex.UIPause);
+    }
+
+    public void ThrowGrenadeButtonClicked()
+    {
+        if (_isGrenadeReady)
+        {
+            SoundManager.Instance.PlaySoundSFX(SoundFXIndex.ThrowFragGrenade);
+            _grenadeControl.ThrowGrenade();
+            _isGrenadeReady = false;
+        }
     }
 
 }

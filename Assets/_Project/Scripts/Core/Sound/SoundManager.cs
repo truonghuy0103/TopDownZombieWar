@@ -272,6 +272,9 @@ public enum SoundFXIndex
     RifleReload,
     ShotgunReload,
     SwitchWeapon,
+    ThrowFragGrenade,
+    FragGrenadeExplode,
+    FragGrenadeReady,
     COUNT
 }
 
