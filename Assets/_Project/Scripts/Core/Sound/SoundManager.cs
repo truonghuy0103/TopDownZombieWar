@@ -68,6 +68,7 @@ public class SoundManager : SingletonMono<SoundManager>
     public void PlaySoundBGM(float volume = 1, bool isLoop = false)
     {
         _bgmSource.clip = _lsBGMs[0];
+        _bgmSource.loop = isLoop;
         _bgmSource.Play();
         _bgmSource.volume = 0;
         _bgmSource.DOFade(volume, 0.25f);
@@ -76,6 +77,7 @@ public class SoundManager : SingletonMono<SoundManager>
     public void PlaySoundBGM(SoundBGM soundBGM, float volume = 1, bool isLoop = false)
     {
         _bgmSource.clip = _lsBGMs[(int)soundBGM];
+        _bgmSource.loop = isLoop;
         _bgmSource.Play();
         _bgmSource.volume = 0;
         _bgmSource.DOFade(volume, 0.25f);
