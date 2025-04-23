@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missions:
   - id: 1
-    sceneName: Map_1
+    sceneName: TestCharacter
     duration: 180
     phases:
     - id: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
       - type: 0
         spawnInterval: 3
   - id: 2
-    sceneName: Map_1
+    sceneName: TestCharacter
     duration: 180
     phases:
     - id: 1
@@ -41,6 +41,8 @@ MonoBehaviour:
       zombieSpawns:
       - type: 0
         spawnInterval: 4
+      - type: 1
+        spawnInterval: 10
     - id: 2
       duration: 60
       zombieSpawns:
