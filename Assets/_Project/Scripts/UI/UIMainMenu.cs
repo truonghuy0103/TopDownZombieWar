@@ -14,7 +14,7 @@ public class UIMainMenu : BaseUI
         {
             GameManager.Instance.SetupGameplay(1);
             UIManager.Instance.HideUI(UIIndex.UILoading);
-            SoundManager.Instance.PlaySoundBGM(SoundBGM.MissionOne);
+            SoundManager.Instance.PlaySoundBGM(SoundBGM.MissionOne,1,true);
         });
     }
     
@@ -29,7 +29,7 @@ public class UIMainMenu : BaseUI
         {
             GameManager.Instance.SetupGameplay(2);
             UIManager.Instance.HideUI(UIIndex.UILoading);
-            SoundManager.Instance.PlaySoundBGM(SoundBGM.MissionTwo);
+            SoundManager.Instance.PlaySoundBGM(SoundBGM.MissionTwo,1,true);
         });
     }
 }

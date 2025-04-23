@@ -28,7 +28,7 @@ public class UILose : BaseUI
         {
             GameManager.Instance.SetupGameplay(currentMission);
             UIManager.Instance.HideUI(UIIndex.UILoading);
-            SoundManager.Instance.PlaySoundBGM((SoundBGM)currentMission - 1);
+            SoundManager.Instance.PlaySoundBGM((SoundBGM)currentMission - 1,1,true);
         });
     }
 
