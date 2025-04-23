@@ -6,7 +6,7 @@ public class PoolDefine : SingletonMono<PoolDefine>
    public void InitPool(Action callback = null)
    {
       Transform transBulletAuto = Resources.Load<Transform>("Pools/BulletAuto") as Transform;
-      CreatePool(NamePool.PoolBulletAuto,50,transBulletAuto);
+      CreatePool(NamePool.PoolBulletAuto,40,transBulletAuto);
       
       Transform transImpactEnemy = Resources.Load<Transform>("Pools/ImpactEnemy") as Transform;
       CreatePool(NamePool.PoolImpactEnemy,50,transImpactEnemy);
@@ -22,6 +22,9 @@ public class PoolDefine : SingletonMono<PoolDefine>
       
       Transform transFragExplosion = Resources.Load<Transform>("Pools/FragExplosion") as Transform;
       CreatePool(NamePool.PoolFragExplosion,2,transFragExplosion);
+      
+      Transform transImpactObstacle = Resources.Load<Transform>("Pools/ImpactObstacle") as Transform;
+      CreatePool(NamePool.PoolImpactObstacle,30,transImpactObstacle);
 
       if (callback != null)
       {
@@ -46,5 +49,6 @@ public enum NamePool
    PoolBloodPlayer = 2,
    PoolBulletShotgun = 3,
    PoolGrenadeFrag = 4,
-   PoolFragExplosion = 5
+   PoolFragExplosion = 5,
+   PoolImpactObstacle = 6
 }

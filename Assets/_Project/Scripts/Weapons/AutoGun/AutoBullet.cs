@@ -51,6 +51,10 @@ public class AutoBullet : MonoBehaviour
             hitInfo.collider.gameObject.GetComponent<ZombieOnDamage>().ApplyDamage(_damage);
             impact = PoolManager.Instance.dictPools[NamePool.PoolImpactEnemy.ToString()].GetObjectInstance();
         }
+        else if (hitInfo.collider != null && hitInfo.collider.gameObject.CompareTag("Obstacle"))
+        {
+            impact = PoolManager.Instance.dictPools[NamePool.PoolImpactObstacle.ToString()].GetObjectInstance();
+        }
         
         if (impact != null)
         {
