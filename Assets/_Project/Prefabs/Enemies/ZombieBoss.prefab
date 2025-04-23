@@ -281,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6fc6e79d06c141c5b6de811b645a83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundZombie: 2
   damage: 0
   navMeshAgent: {fileID: 2864335072986441451}
   radiusAttack: 4

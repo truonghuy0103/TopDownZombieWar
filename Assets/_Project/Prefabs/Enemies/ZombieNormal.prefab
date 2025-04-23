@@ -198,10 +198,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709ddff8d330a4105b7ce3c38cc4fa90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundZombie: 1
   damage: 0
   navMeshAgent: {fileID: 8409705398028513597}
   radiusAttack: 2
-  target: {fileID: 0}
+  player: {fileID: 0}
+  playerHealth: {fileID: 0}
   zombieHealth: {fileID: 440377454668532324}
   zombieNormalDataBinding: {fileID: 7374712352848490576}
   configEnemyData:

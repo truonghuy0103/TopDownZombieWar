@@ -6,6 +6,7 @@ public class ShotgunAction : IWeapon
     public void OnAttack(object data)
     {
         _shotgunWeapon = data as ShotgunWeapon;
+        SoundManager.Instance.PlaySoundSFX(_shotgunWeapon.soundFire,0.5f);
         //Create bullet
         Transform transBullet = PoolManager.Instance.dictPools[NamePool.PoolBulletShotgun.ToString()].GetObjectInstance();
         transBullet.position = _shotgunWeapon.posShoot.position;

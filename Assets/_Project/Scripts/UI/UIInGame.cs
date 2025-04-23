@@ -111,11 +111,13 @@ public class UIInGame : MonoBehaviour
 
     public void ButtonSwitchWeaponClicked()
     {
+        SoundManager.Instance.PlaySoundSFX(SoundFXIndex.SwitchWeapon);
         _weaponControl.SwitchWeapon();
     }
 
     public void PauseButtonClicked()
     {
+        SoundManager.Instance.PlaySoundSFX(SoundFXIndex.Click);
         UIManager.Instance.ShowUI(UIIndex.UIPause);
     }
 

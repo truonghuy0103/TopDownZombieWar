@@ -7,6 +7,9 @@ public class UILose : BaseUI
     {
         base.OnSetUp(param);
         
+        SoundManager.Instance.StopSoundBGM();
+        SoundManager.Instance.StopAllSoundFX();
+        
         LoadSceneManager.Instance.OnLoadScene("Main", (obj) =>
         {
             
@@ -25,11 +28,14 @@ public class UILose : BaseUI
         {
             GameManager.Instance.SetupGameplay(currentMission);
             UIManager.Instance.HideUI(UIIndex.UILoading);
+            SoundManager.Instance.PlaySoundBGM((SoundBGM)currentMission);
         });
     }
 
     public void HomeButtonClicked()
     {
+        SoundManager.Instance.PlaySoundSFX(SoundFXIndex.Click);
+        
         UIManager.Instance.HideAllUI();
         UIManager.Instance.ShowUI(UIIndex.UIMainMenu);
     }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Core;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -23,7 +24,8 @@ public class WeaponBehaviour : MonoBehaviour
     private ConfigGunData _configGunData;
     private WeaponControl _weaponControl;
 
-    [SerializeField] private AudioSource _soundWeapon;
+    public SoundFXIndex soundFire;
+    public SoundFXIndex soundReload;
     
     public virtual void OnSetupBehaviour(ConfigGunData configGunData, WeaponControl weaponControl)
     {
@@ -61,12 +63,12 @@ public class WeaponBehaviour : MonoBehaviour
         if (currentBullet > 0)
         {
             iWeapon.OnAttack(this);
-            _soundWeapon.Play();
             PlayMuzzle();
             _weaponControl.OnUpdateBullet();
         }
         else
         {
+            SoundManager.Instance.PlaySoundSFX(soundReload);
             _weaponControl.OnReload();
         }
     }

@@ -10,6 +10,9 @@ public class ZombieBoss_DeadState : FSMState
     public override void OnEnter()
     {
         base.OnEnter();
+        
+        SoundManager.Instance.StopSoundZombie(parent.soundZombie);
+        
         parent.isDead = true;
         parent.zombieBossDataBinding.Dead = true;
         _timer = 1;

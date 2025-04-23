@@ -6,6 +6,7 @@ public class AutoAction : IWeapon
     public void OnAttack(object data)
     {
        _autoWeapon = data as AutoWeapon;
+       SoundManager.Instance.PlaySoundSFX(_autoWeapon.soundFire,0.1f);
        //Create bullet
        Transform transBullet = PoolManager.Instance.dictPools[NamePool.PoolBulletAuto.ToString()].GetObjectInstance();
        transBullet.position = _autoWeapon.posShoot.position;

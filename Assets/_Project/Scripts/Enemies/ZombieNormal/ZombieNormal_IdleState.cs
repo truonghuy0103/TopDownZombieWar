@@ -13,6 +13,7 @@ public class ZombieNormal_IdleState : FSMState
     public override void OnEnter()
     {
         base.OnEnter();
+        SoundManager.Instance.PlaySoundZombie(parent.soundZombie);
         _randomTime = Random.Range(2f, 4f);
         _timeWait = 0;
         //Set anim idle

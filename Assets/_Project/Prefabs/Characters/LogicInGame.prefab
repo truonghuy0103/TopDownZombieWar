@@ -2973,10 +2973,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: weapon_auto_01
       objectReference: {fileID: 0}
-    - target: {fileID: 7233580907931854114, guid: aa9f9e32e48104ff4845cbe4386f249a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3178,10 +3174,6 @@ PrefabInstance:
     - target: {fileID: 8593316866424324208, guid: 718327575dec14e7aafa0e624b612f98, type: 3}
       propertyPath: m_Name
       value: weapon_shotguns_10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8593316866424324208, guid: 718327575dec14e7aafa0e624b612f98, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
