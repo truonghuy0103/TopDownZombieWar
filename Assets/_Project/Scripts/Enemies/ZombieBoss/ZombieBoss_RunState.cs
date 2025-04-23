@@ -44,6 +44,7 @@ public class ZombieBoss_RunState : FSMState
     {
         base.OnExit();
         _timer = 0;
-        parent.navMeshAgent.speed = parent.configEnemyData.speed;
+        parent.navMeshAgent.speed = 0;
+        parent.zombieBossDataBinding.Speed = 0;
     }
 }

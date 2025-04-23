@@ -24,4 +24,11 @@ public class ZombieNormal_RunState : FSMState
             parent.GotoState(parent.attackState);
         }
     }
+
+    public override void OnExit()
+    {
+        base.OnExit();
+        parent.navMeshAgent.speed = 0;
+        parent.zombieNormalDataBinding.Speed = 0;
+    }
 }
