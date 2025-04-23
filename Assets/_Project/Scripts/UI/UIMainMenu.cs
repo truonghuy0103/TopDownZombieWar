@@ -21,7 +21,7 @@ public class UIMainMenu : BaseUI
         UIManager.Instance.HideUI(UIIndex.UIMainMenu);
         UIManager.Instance.ShowUI(UIIndex.UILoading);
         // Load scene
-        ConfigMissionData configMissionData = ConfigManager.Instance.configMission.GetMissionDataById(1.ToString());
+        ConfigMissionData configMissionData = ConfigManager.Instance.configMission.GetMissionDataById(2.ToString());
         LoadSceneManager.Instance.OnLoadScene(configMissionData.sceneName, (obj) =>
         {
             GameManager.Instance.SetupGameplay(2);
